@@ -1,0 +1,22 @@
+<view-header-comp [headerArr]="['报表统计']" ></view-header-comp>
+<view-body-comp>
+  <content>
+    <div class="disFlex align-center">
+      <label class="mg-b-0 font-bold fz-14">消耗时间</label>
+      <input class="c-input-data" placeholder="请选择时间" (click)="e.toggle()" readonly name="dp" ngbDatepicker
+             #e="ngbDatepicker"  >
+      <button class="c-client-data" (click)="e.toggle()" type="button">
+        <i class="fa fa-calendar-o" aria-hidden="true" style=" cursor: pointer;font-size: 14px;"></i>
+      </button>
+    </div>
+
+
+    <div class="disFlex align-center hor-center  mg-t-40">
+      <div [ng2-echarts]="chaDateCirec" class="flex" style="height:calc(100vh - 320px);margin-right: 30px;"></div>
+      <div [ng2-echarts]="chaDateCode" class="flex" style="height:calc(100vh - 320px);"></div>
+      <!--<div class="flex">条形图</div>-->
+    </div>
+  </content>
+</view-body-comp>
+
+

@@ -1,0 +1,36 @@
+
+      <view-header-comp [headerArr]="['设备监测']" ></view-header-comp>
+      <!--<zm_search_box [label]=" '项目查询'" [placeholder]="'编号/名称'" [(zmValue)]="viewData.queryParam" (callBack)="queryListByNumOrName()"></zm_search_box>-->
+      <view-body-comp>
+        <content>
+            <zm_search_box [label]=" '设备查询'" [placeholder]="'编号/名称'" ></zm_search_box>  <!--数据状态[(zmValue)]="viewData.queryParam" (callBack)="queryListByNumOrName()"-->
+          <table class="table text-center mg-t-25">
+            <thead>
+              <th>设备编号</th>
+              <th>设备状态</th>
+              <th style="width: 15%">电流状态</th>
+              <th style="width: 12%">电压状态</th>
+              <th>电能状态</th>
+              <th>成本</th>
+              <th style="width: 15%">操作</th>
+            </thead>
+            <tbody>
+              <tr class="c-tr">
+                <td>EB0005267</td>
+                <td>正常</td>
+                <td>50（A）</td>
+                <td>50（V）</td>
+                <td>50（U）</td>
+                <td><i class="fa fa-yen mg-r-5"></i>5278</td>
+                <td>
+                  <span class="mg-r-10 font-c1 cur-hand" [routerLink]="['/main/equipment/equDetail/']">查看</span><!--[routerLink]="['/main/storePrd/storePrdDetail/'+item.id]"-->
+                  <span class="font-c1">编辑</span>
+                  <!--<a class=" mg-r-10" *ngIf=" item.state == 2" (click)="deletePrd(item.id)">删除</a>-->
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </content>
+      </view-body-comp>
+
+

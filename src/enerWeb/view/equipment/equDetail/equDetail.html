@@ -1,0 +1,10 @@
+<view-header-comp [headerArr]="['设备监测','设备详情']" ></view-header-comp>
+<view-body-comp>
+  <content>
+    <h4>设备编号:EB0005267</h4>
+    <div class="disFlex align-center hor-center pd-t-20 mg-t-40">
+      <div [ng2-echarts]="chaDate" class="flex" style="height:calc(100vh - 320px); width: 100%;"></div>
+    </div>
+  </content>
+</view-body-comp>
+

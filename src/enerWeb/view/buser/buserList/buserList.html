@@ -1,0 +1,27 @@
+    <div class="disFlex">
+      <div class="flex consumerPurchase disFlex align-center hor-center cur-hand" (click)="turnToAddPurchase()">
+        <i class="fa fa-sliders" aria-hidden="true" style="color: #fff;font-size: 40px;"></i>
+        <span class="mg-l-20 font-bold">部门用电量</span>
+      </div>
+      <div class="flex memberRecharge disFlex align-center hor-center mg-l-30 cur-hand" (click)="turnToAddRecharge()">
+        <i class="fa fa-sitemap" aria-hidden="true" style="color: #fff;font-size: 40px;"></i>
+        <span class="mg-l-20 font-bold">电量（KW）</span>
+      </div>
+      <div class="flex addCustomer disFlex align-center hor-center mg-l-30 cur-hand" (click)="turnToAddLeaguer()">
+        <i class="fa fa-thermometer-1" aria-hidden="true"  style="color: #fff;font-size: 40px;"></i>
+        <span class="mg-l-20 font-bold">电流（A）</span>
+      </div>
+      <div class="flex addAppointment disFlex align-center hor-center mg-l-30 cur-hand" (click)="turnToAddAppoint()">
+        <i class="fa fa-thermometer-2" aria-hidden="true" style="color: #fff;font-size: 40px;"></i>
+        <span class="mg-l-20 font-bold">电压（V）</span>
+      </div>
+    </div>
+
+    <!--图表-->
+    <div class="disFlex align-center hor-center pd-t-20 mg-t-40">
+      <div [ng2-echarts]="chartData" class="flex" style="height:calc(100vh - 320px); width: 100%;"></div>
+    <!--  <div class="flex">折线图表</div>-->
+
+    </div>
+
+

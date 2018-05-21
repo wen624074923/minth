@@ -1,0 +1,59 @@
+
+<view-header-comp [headerArr]="['能耗分析']" ></view-header-comp>
+<view-body-comp>
+  <content>
+    <div class="disFlex align-center hor-center ">
+      <div [ng2-echarts]="EnerChaDate" class="" style="height:calc(100vh - 195px); width: 70%;"></div>
+        <div style="width: 30%;padding: 20px;" >
+             <div class="ener_frame disFlex align-center hor-center">
+                 <div>
+                   <div class="disFlex align-center"><div>总电表数</div><i class="fa fa-arrow-right mg-l-20 mg-r-20" aria-hidden="true" style="font-size: 26px;color: #928484"></i><div>12%</div></div>
+                   <div class="pos-r mg-t-10 fz-14" style="left: 50px;">同比去年用电量</div>
+                 </div>
+             </div>
+             <div class="ener_frame disFlex align-center hor-center">
+               <div>
+                 <div class="disFlex align-center hor-center"><div>总电表数</div><i class="fa fa-arrow-right mg-l-20 mg-r-20" aria-hidden="true"  style="font-size: 26px;color: #928484"></i><div>12%</div></div>
+                 <div class="pos-r mg-t-10 fz-14" style="left: 50px;">同比上月用电量</div>
+               </div>
+             </div>
+             <div class="ener_frame disFlex align-center hor-center">
+               <div>
+                 <div class="disFlex align-center"><div>总电表数</div><i class="fa fa-arrow-right mg-l-20 mg-r-20 " aria-hidden="true" style="font-size: 26px;color: #928484"></i><div>12%</div></div>
+                 <div class="pos-r mg-t-10 fz-14" style="left: 50px;">同比上周用电量</div>
+               </div>
+             </div>
+        </div>
+    </div>
+  </content>
+</view-body-comp>
+
+
+
+
+<h3>Get configuration from JSON file   :数据调用</h3>
+<div>
+  <button (click)="showConfig_v1()">ge问t</button>
+  <button (click)="clear(); showConfigResponse()">getResponse</button>
+  <button (click)="clear()">clear</button>
+  <button (click)="clear(); makeError()">error</button>
+  <span *ngIf="config">
+    <p>天津敏信:{{config.heroesUrl}}</p>
+    <p>广州敏实:{{config.textfile}}</p>
+    <div *ngIf="headers">
+      Response headers:
+      <ul>
+        <li *ngFor="let header of headers">{{header}}ddd</li>
+        <span>文国良</span>
+      </ul>
+    </div>
+  </span>
+</div>
+
+
+
+<!--
+Copyright 2017-2018 Google Inc. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+-->

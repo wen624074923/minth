@@ -1,0 +1,28 @@
+<!--<h4>看板展示</h4>-->
+<view-header-comp [headerArr]="['看板展示']" ></view-header-comp>
+<view-body-comp>
+  <content>
+    <ngb-tabset>
+      <ngb-tab title="用电预警">
+          <ng-template ngbTabContent>
+            <!--图表-->
+            <div class="disFlex align-center hor-center pd-t-20">
+              <div [ng2-echarts]="BoardChartData" class="flex" style="height:calc(100vh - 320px); width: 100%;"></div>
+              <!--  <div class="flex">折线图表</div>-->
+
+            </div>
+          </ng-template>
+      </ngb-tab>
+      <ngb-tab title="用电趋势">
+        <ng-template ngbTabContent>
+          <!--图表-->
+          <div class="disFlex align-center hor-center pd-t-20">
+            <div [ng2-echarts]="BoardLineChaDate" class="flex" style="height:calc(100vh - 320px); width: 100%;"></div>
+            <!--  <div class="flex">折线图表</div>-->
+
+          </div>
+        </ng-template>
+      </ngb-tab>
+    </ngb-tabset>
+  </content>
+</view-body-comp>
