@@ -38,13 +38,13 @@
   <button (click)="clear()">clear</button>
   <button (click)="clear(); makeError()">error</button>
   <span *ngIf="config">
-    <p>天津敏信:{{config.heroesUrl}}</p>
-    <p>广州敏实:{{config.textfile}}</p>
+    <p>天津敏信:2018 05 12{{config.heroesUrl}}</p>
+    <p>广州敏实:2018 05 12{{config.textfile}}</p>
     <div *ngIf="headers">
       Response headers:
       <ul>
         <li *ngFor="let header of headers">{{header}}ddd</li>
-        <span>文国良</span>
+        <span>文国良 2018 05 12</span>
       </ul>
     </div>
   </span>
